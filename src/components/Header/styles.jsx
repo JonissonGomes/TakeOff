@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const ContainerLogo = styled.div`
     width: 14%;
     height: 8%;
-    margin-left: 8%;
+    margin-left: 4%;
 `;
 
 export const ContainerIndices = styled.div`
