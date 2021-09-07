@@ -1,9 +1,12 @@
 import React from 'react'
+import './styles.jsx'
+
+import Header from '../../components/Header/header'
 
 export default function Home() {
     return (
         <div>
-            <h1>Pagina Inical</h1>
+            <Header />
         </div>
     )
 }
