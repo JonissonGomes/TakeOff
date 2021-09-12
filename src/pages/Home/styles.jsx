@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const Page = styled.div`
+    width: 100vw;
+    height: 40vh;
+`;
+
+
 export const Container = styled.div`
     margin-top: 1%;
     display: flex;

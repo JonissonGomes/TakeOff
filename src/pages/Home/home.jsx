@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, ContainerHello, Title, Subtitle, Description, Button, ContainerImages } from './styles.jsx'
+import { Page, Container, ContainerHello, Title, Subtitle, Description, Button, ContainerImages } from './styles.jsx'
 
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
@@ -8,9 +8,8 @@ import Panel from '../../Assets/panel.png'
 
 export default function Home() {
     return (
-        <div>
+        <Page>
             <Header />
-
             <Container>
                 <ContainerHello>
                     <Title>{`FREE`}</Title>
@@ -27,6 +26,6 @@ export default function Home() {
             </Container>
 
             <Footer />
-        </div>
+        </Page>
     )
 }
