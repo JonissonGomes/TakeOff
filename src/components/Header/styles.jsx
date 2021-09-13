@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
     display: flex;
     text-align: center;
@@ -8,9 +7,9 @@ export const Container = styled.div`
     width: 100%;
     height: 20%;
     justify-content: space-between;
-    `;
+`;
     
-    export const ContainerLogo = styled.div`
+export const ContainerLogo = styled.div`
     width: 14%;
     height: 8%;
     margin-left: 6.6%;
@@ -24,6 +23,7 @@ export const ContainerIndices = styled.div`
     width: 20%;
     height: 20%;
     margin-top: 4%;
+    margin-right: 6%;
     justify-content: space-between;
 `;
 
