@@ -1,5 +1,5 @@
-import React from 'react'
-import { Page, Container, ContainerHello, Title, Subtitle, Description, Button, ContainerImages } from './styles.jsx'
+import React from 'react';
+import { Page, Container, ContainerHello, Title, Subtitle, Description, Button, ContainerImages } from './styles.jsx';
 
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
@@ -18,7 +18,7 @@ export default function Home() {
                     <Description>{`Uma descrição bem topada sobre mim ou sobre meu trabalho onde
                      as pessoas poderão se engajar em ver meu conteúdo nas
                       redes sociais e até mesmo compartilhar com os amigos.`}</Description>
-                    <Link style={{ textDecoration: 'none'}} to={"/"}>
+                    <Link style={{ textDecoration: 'none'}} to={"/portifolio"}>
                         <Button>Começar tour</Button>
                     </Link>
                 </ContainerHello>
