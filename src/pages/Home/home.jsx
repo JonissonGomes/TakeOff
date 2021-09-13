@@ -18,7 +18,7 @@ export default function Home() {
                     <Description>{`Uma descrição bem topada sobre mim ou sobre meu trabalho onde
                      as pessoas poderão se engajar em ver meu conteúdo nas
                       redes sociais e até mesmo compartilhar com os amigos.`}</Description>
-                    <Link style={{ textDecoration: 'none'}} to={"/portifolio"}>
+                    <Link style={{ textDecoration: 'none'}} to={"/"}>
                         <Button>Começar tour</Button>
                     </Link>
                 </ContainerHello>
