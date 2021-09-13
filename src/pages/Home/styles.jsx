@@ -5,7 +5,6 @@ export const Page = styled.div`
     height: 40vh;
 `;
 
-
 export const Container = styled.div`
     margin-top: 4%;
     display: flex;
@@ -22,8 +21,8 @@ export const ContainerHello = styled.div`
 `;
 
 export const Title = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-    font-family: 'Concert One', Sans;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    font-family: 'Montserrat', sans;
     color: #000000;
     margin-bottom: 0;
     font-size: 64pt;
@@ -31,8 +30,8 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-    font-family: 'Concert One', Sans;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+    font-family: 'Montserrat', sans;
     color: #000000;
     margin-top: -20px;
     margin-bottom: 0;
