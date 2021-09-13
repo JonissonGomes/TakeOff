@@ -12,11 +12,11 @@ export default function Social() {
             </Link>
 
             <Link to="/">
-                <Icon icon="akar-icons:whatsapp-fill" fontSize={26} color="#6D747A" />
+                <Icon icon="ant-design:youtube-filled" fontSize={36} color="#6D747A" />
             </Link>
 
             <Link to="/">
-                <Icon icon="ant-design:youtube-filled" fontSize={36} color="#6D747A" />
+                <Icon icon="akar-icons:whatsapp-fill" fontSize={26} color="#6D747A" />
             </Link>
 
         </SocialMedia>
