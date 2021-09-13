@@ -8,15 +8,15 @@ export default function Social() {
     return (
         <SocialMedia>
             <Link to="/">
-                <Icon icon="entypo-social:instagram" fontSize={30} color="000000" />
+                <Icon icon="entypo-social:instagram" fontSize={26} color="#6D747A" />
             </Link>
 
             <Link to="/">
-                <Icon icon="akar-icons:whatsapp-fill" fontSize={30} color="000000" />
+                <Icon icon="akar-icons:whatsapp-fill" fontSize={26} color="#6D747A" />
             </Link>
 
             <Link to="/">
-                <Icon icon="entypo-social:instagram" fontSize={30} color="000000" />
+                <Icon icon="ant-design:youtube-filled" fontSize={36} color="#6D747A" />
             </Link>
 
         </SocialMedia>

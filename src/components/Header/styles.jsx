@@ -7,37 +7,31 @@ export const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 20%;
-    margin-top: 2%;
     justify-content: space-between;
-`;
-
-export const ContainerLogo = styled.div`
+    `;
+    
+    export const ContainerLogo = styled.div`
     width: 14%;
     height: 8%;
-    margin-left: 4%;
+    margin-left: 6.6%;
 `;
 
 export const ContainerIndices = styled.div`
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+    font-family: lato, sans-serif;
     display: flex;
     align-items: center;
-    width: 22%;
+    width: 20%;
     height: 20%;
+    margin-top: 4%;
     justify-content: space-between;
 `;
 
 export const Indices = styled.h3`
-    font-size: 18pt;
+    font-size: 16pt;
     color: #6D747A;
     margin-left: 1%;
     align-items: center;
-`;
-
-export const ContainerMedia = styled.div`
-    display: flex;
-    align-items: center;
-    width: 30%;
-    height: 20%;
-    margin-top: 2%;
-    justify-content: space-between;
+    text-decoration: 'none';
 `;
 
