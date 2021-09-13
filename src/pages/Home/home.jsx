@@ -5,6 +5,7 @@ import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
 
 import Panel from '../../Assets/panel.png'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -17,11 +18,13 @@ export default function Home() {
                     <Description>{`Uma descrição bem topada sobre mim ou sobre meu trabalho onde
                      as pessoas poderão se engajar em ver meu conteúdo nas
                       redes sociais e até mesmo compartilhar com os amigos.`}</Description>
-                    <Button>Começar tour</Button>
+                    <Link style={{ textDecoration: 'none'}} to={"/"}>
+                        <Button>Começar tour</Button>
+                    </Link>
                 </ContainerHello>
 
                 <ContainerImages>
-                    <img src={Panel}/>
+                    <img src={Panel} />
                 </ContainerImages>
             </Container>
 
