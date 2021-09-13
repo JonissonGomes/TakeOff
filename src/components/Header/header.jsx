@@ -12,22 +12,24 @@ export default function Header() {
     return (
         <Container>
             <ContainerLogo>
-                <img src={Logo} />
+                <Link to={"/"}>
+                    <img src={Logo} />
+                </Link>
             </ContainerLogo>
 
             <ContainerIndices>
-                <Link style={{ textDecoration: 'none'}} to="/">
+                <Link style={{ textDecoration: 'none' }} to="/">
                     <Indices>Inicio</Indices>
                 </Link>
-                <Link style={{ textDecoration: 'none'}} to="/">
+                <Link style={{ textDecoration: 'none' }} to="/">
                     <Indices>Galeria</Indices>
                 </Link>
 
-                <Link style={{ textDecoration: 'none'}} to="/Portifolio">
+                <Link style={{ textDecoration: 'none' }} to="/Portifolio">
                     <Indices>Portifolio</Indices>
                 </Link>
 
-                <Link style={{ textDecoration: 'none'}} to="/">
+                <Link style={{ textDecoration: 'none' }} to="/">
                     <Indices>Sobre</Indices>
                 </Link>
 
