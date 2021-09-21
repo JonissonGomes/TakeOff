@@ -21,7 +21,7 @@ export default function Header() {
                 <Link style={{ textDecoration: 'none' }} to="/">
                     <Indices>Inicio</Indices>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to="/">
+                <Link style={{ textDecoration: 'none' }} to="/Galeria">
                     <Indices>Galeria</Indices>
                 </Link>
 
