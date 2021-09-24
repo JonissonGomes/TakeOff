@@ -56,3 +56,16 @@ export const ContainerSelect = styled.div`
     margin-left: 1%;
 `;
 
+export const Button = styled.div`
+    background-color: none;
+    border: 1px solid #6D747A;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-left: 2%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    color: #6D747A;
+`;

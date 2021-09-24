@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 
-import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect } from './styles.jsx';
+import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button } from './styles.jsx';
 
 
 import Header from '../../components/Header/header';
@@ -48,7 +48,7 @@ export default function Galeria() {
                         onChange={setSelectOptinsFilter}
                         options={filter}
                     />
-                </ContainerSelect>         
+                </ContainerSelect>
 
                 <FilterLabel>Região:</FilterLabel>
 
@@ -59,6 +59,8 @@ export default function Galeria() {
                         options={regioes}
                     />
                 </ContainerSelect>
+                
+                <Button>Aplicar</Button>
             </ContainerFilter>
 
             <Footer />
