@@ -27,8 +27,13 @@ export default function Galeria() {
 
 
     const [selectOptionsFilter, setSelectOptinsFilter] = useState(filter[0]);
+    const [selectOptionsFilterOld, setSelectOptinsFilterOld] = useState(filter[0]);
     const [selectOptionsRegioes, setSelectOptinsRegioes] = useState(regioes[0]);
 
+    function aplicarFiltro() {
+        console.log('Filtrei por:', selectOptionsFilter);
+        setSelectOptinsFilterOld(selectOptionsFilter);
+    }
 
     return (
         <Page>
@@ -59,13 +64,16 @@ export default function Galeria() {
                         options={regioes}
                     />
                 </ContainerSelect>
-                
-                <Button>Aplicar</Button>
+
+                {selectOptionsFilter != selectOptionsFilterOld &&
+                    <Button onClick={aplicarFiltro}>Aplicar</Button>
+                }
+
             </ContainerFilter>
 
             <Footer />
 
-        </Page>
+        </Page >
 
     )
 }
