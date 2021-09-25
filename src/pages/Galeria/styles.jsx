@@ -69,3 +69,16 @@ export const Button = styled.div`
     cursor: pointer;
     color: #6D747A;
 `;
+
+export const Clear = styled.div`
+    background-color: #FA5D5D;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    color: white;
+`;
