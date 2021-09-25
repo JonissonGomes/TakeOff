@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
-import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button, Clear } from './styles.jsx';
+import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button, Clear, ContainerImages, Content, Image, Cidade, Estado, More, Redes, ContainerInfo } from './styles.jsx';
 
 
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
+
+import Farol from '../../Assets/farol.png';
 
 export default function Galeria() {
 
@@ -25,6 +29,16 @@ export default function Galeria() {
         { value: 5, label: 'Região centroeste' },
     ];
 
+    const Galery = [
+        { value: 0, cidade: 'Muro Alto', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: 'https://www.instagram.com', youtube: 'https://www.youtube.com', pinterest: 'https://www.instagram.com' },
+        { value: 0, cidade: 'Praia do Cabo', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: 'https://www.instagram.com', youtube: 'https://www.youtube.com', pinterest: '' },
+        { value: 0, cidade: 'Cabo Branco', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: 'https://www.instagram.com', youtube: 'https://www.youtube.com', pinterest: 'https://www.instagram.com' },
+        { value: 0, cidade: 'Porto de galinhas', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', youtube: 'https://www.youtube.com', pinterest: '' },
+        { value: 0, cidade: 'Camboa', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: 'https://www.instagram.com', youtube: '', pinterest: '' },
+        { value: 0, cidade: 'Cupi', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: '', youtube: 'https://www.youtube.com', pinterest: '' },
+        { value: 0, cidade: 'Gaibu', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: '', youtube: '', pinterest: 'https://www.instagram.com' },
+        { value: 0, cidade: 'Calhetas', estado: 'Pernambuco', municipio: 'Cabo', descricao: 'Altas paisagens, um mar completamente claro, com águas bem quentes onde você pode admirar a natureza.', data: '21/09/2021', instagram: 'https://www.instagram.com', youtube: 'https://www.youtube.com', pinterest: '' },
+    ];
 
     const [selectOptionsFilter, setSelectOptionsFilter] = useState(filter[0]);
     const [selectOptionsFilterOld, setSelectOptionsFilterOld] = useState(filter[0]);
@@ -97,6 +111,48 @@ export default function Galeria() {
                 }
 
             </ContainerFilter>
+
+            <ContainerImages>
+                {Galery.map((item) =>
+                    <Content>
+                        <Image src={Farol} />
+                        <ContainerInfo>
+                            <Cidade>{item.cidade}</Cidade>
+                            <Estado>{item.estado}</Estado>
+                            <Link style={{ textDecoration: 'none' }} to="/">
+                                <More>Ver mais</More>
+                            </Link>
+
+                            <Redes>
+                                {item.instagram != '' &&
+                                    <>
+                                        <Link style={{ textDecoration: 'none' }} to="/">
+                                            <Icon icon="entypo-social:instagram" fontSize={20} color="White" />
+                                        </Link>
+                                    </>
+                                }
+
+                                {item.youtube != '' &&
+                                    <>
+                                        <Link to="/">
+                                            <Icon icon="ant-design:youtube-filled" fontSize={30} color="White" />
+                                        </Link>
+                                    </>
+
+                                }
+
+                                {item.pinterest != '' &&
+                                    <>
+                                        <Link to="/">
+                                            <Icon icon="akar-icons:whatsapp-fill" fontSize={20} color="White" />
+                                        </Link>
+                                    </>
+                                }
+                            </Redes>
+                        </ContainerInfo>
+                    </Content>
+                )}
+            </ContainerImages>
 
             <Footer />
 

@@ -82,3 +82,81 @@ export const Clear = styled.div`
     cursor: pointer;
     color: white;
 `;
+
+export const ContainerImages = styled.div`
+    display: flex;
+    margin-top: 2%;
+    margin-left: 10%;
+`;
+
+export const ContainerInfo = styled.div`
+    border-radius: 4px;
+    position: absolute;
+    width: 380px;
+    height: 158px;
+    opacity: 0;
+    margin-top: -8%;
+    transition: 400ms;
+`;
+
+export const Content = styled.div`
+    border-radius: 2px;
+    margin-left: 1%;
+    padding: 4px;
+    text-align: center;
+    &:hover{
+        ${ContainerInfo}{
+            opacity: 1;
+            background-color: #0009;
+            transition: 400ms;
+        }
+      }
+`;
+
+export const Image = styled.img`
+    width: 380px;
+`;
+
+export const Cidade = styled.p`
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+    font-family: lato, sans-serif;
+    letter-spacing: 0;
+    color: white;
+    margin-top: 6%;
+    margin-bottom: 0;
+    margin-left: 2%;
+    font-weight: 900;
+    font-size: 18pt;
+`;
+
+export const Estado = styled.p`
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+    font-family: lato, sans-serif;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: -1%;
+    margin-bottom: 0;
+    margin-left: 2%;
+    font-weight: 100;
+    font-size: 10pt;
+`;
+
+export const More = styled.p`
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    margin-left: 36%;
+    margin-bottom: 0;
+    margin-right: 36%;
+    padding: 4px;
+    text-align: center;
+`;
+
+export const Redes = styled.p`
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 40%;
+    justify-content: center;
+    width: 20%;
+`;
