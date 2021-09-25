@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 
-import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button } from './styles.jsx';
+import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button, Clear } from './styles.jsx';
 
 
 import Header from '../../components/Header/header';
@@ -26,13 +26,23 @@ export default function Galeria() {
     ];
 
 
-    const [selectOptionsFilter, setSelectOptinsFilter] = useState(filter[0]);
-    const [selectOptionsFilterOld, setSelectOptinsFilterOld] = useState(filter[0]);
-    const [selectOptionsRegioes, setSelectOptinsRegioes] = useState(regioes[0]);
+    const [selectOptionsFilter, setSelectOptionsFilter] = useState(filter[0]);
+    const [selectOptionsFilterOld, setSelectOptionsFilterOld] = useState(filter[0]);
+    const [selectOptionsRegioes, setSelectOptionsRegioes] = useState(regioes[0]);
+    const [selectOptionsRegioesOld, setSelectOptionsRegioesOld] = useState(regioes[0]);
 
     function aplicarFiltro() {
         console.log('Filtrei por:', selectOptionsFilter);
-        setSelectOptinsFilterOld(selectOptionsFilter);
+        setSelectOptionsFilterOld(selectOptionsFilter);
+
+        console.log('Filtrei pela região:', selectOptionsRegioes);
+        setSelectOptionsRegioesOld(selectOptionsRegioes);
+    }
+
+    function resetFiltro() {
+        console.log('Limpando os filtros:');
+        setSelectOptionsFilterOld(filter[0]);
+        setSelectOptionsFilter(filter[0]);
     }
 
     return (
@@ -50,7 +60,7 @@ export default function Galeria() {
                 <ContainerSelect>
                     <Select
                         defaultValue={selectOptionsFilter}
-                        onChange={setSelectOptinsFilter}
+                        onChange={setSelectOptionsFilter}
                         options={filter}
                     />
                 </ContainerSelect>
@@ -60,13 +70,30 @@ export default function Galeria() {
                 <ContainerSelect>
                     <Select
                         defaultValue={selectOptionsRegioes}
-                        onChange={setSelectOptinsRegioes}
+                        onChange={setSelectOptionsRegioes}
                         options={regioes}
                     />
                 </ContainerSelect>
 
-                {selectOptionsFilter != selectOptionsFilterOld &&
-                    <Button onClick={aplicarFiltro}>Aplicar</Button>
+                {selectOptionsFilter != selectOptionsFilterOld && selectOptionsRegioes === selectOptionsRegioesOld &&
+                    <>
+                        <Button onClick={aplicarFiltro}>Aplicar filtro</Button>
+                        <Clear onClick={resetFiltro}> X </Clear>
+                    </>
+                }
+
+                {selectOptionsRegioes != selectOptionsRegioesOld && selectOptionsFilter === selectOptionsFilterOld &&
+                    <>
+                        <Button onClick={aplicarFiltro}>Aplicar filtro</Button>
+                        <Clear onClick={resetFiltro}> X </Clear>
+                    </>
+                }
+
+                {selectOptionsRegioes != selectOptionsRegioesOld && selectOptionsFilter != selectOptionsFilterOld &&
+                    <>
+                        <Button onClick={aplicarFiltro}>Aplicar filtros</Button>
+                        <Clear onClick={resetFiltro}> X </Clear>
+                    </>
                 }
 
             </ContainerFilter>
