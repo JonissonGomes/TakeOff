@@ -3,13 +3,19 @@ import Select from 'react-select';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
-import { Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel, ContainerSelect, Button, Clear, ContainerImages, Content, Image, Cidade, Estado, More, Redes, ContainerInfo } from './styles.jsx';
+import {
+    Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel,
+    ContainerSelect, Button, Clear, ContainerImages, Content, Image, Cidade,
+    Estado, More, Redes, ContainerInfo, Modal, ContentModal, SectionButton,
+    ContainerModal, Info, Locale, SubLocale, Details, Data, MediaLink, ImageModal
+} from './styles.jsx';
 
 
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
 
 import Farol from '../../Assets/farol.png';
+import { SocialMedia } from '../../components/SocialMedia/styles.jsx';
 
 export default function Galeria() {
 
@@ -44,6 +50,7 @@ export default function Galeria() {
     const [selectOptionsFilterOld, setSelectOptionsFilterOld] = useState(filter[0]);
     const [selectOptionsRegioes, setSelectOptionsRegioes] = useState(regioes[0]);
     const [selectOptionsRegioesOld, setSelectOptionsRegioesOld] = useState(regioes[0]);
+    const [showModal, setShowModal] = useState(false);
 
     function aplicarFiltro() {
         console.log('Filtrei por:', selectOptionsFilter);
@@ -57,6 +64,14 @@ export default function Galeria() {
         console.log('Limpando os filtros:');
         setSelectOptionsFilterOld(filter[0]);
         setSelectOptionsFilter(filter[0]);
+    }
+
+    function openModal() {
+        setShowModal(true)
+    }
+
+    function closeModal() {
+        setShowModal(false)
     }
 
     return (
@@ -119,9 +134,7 @@ export default function Galeria() {
                         <ContainerInfo>
                             <Cidade>{item.cidade}</Cidade>
                             <Estado>{item.estado}</Estado>
-                            <Link style={{ textDecoration: 'none' }} to="/">
-                                <More>Ver mais</More>
-                            </Link>
+                            <More onClick={openModal}>Ver mais</More>
 
                             <Redes>
                                 {item.instagram != '' &&
@@ -154,8 +167,31 @@ export default function Galeria() {
                 )}
             </ContainerImages>
 
-            <Footer />
+            {showModal === true &&
+                <>
+                    <Modal />
+                    <ContentModal>
+                        <SectionButton>
+                            <Clear onClick={closeModal}> X </Clear>
+                        </SectionButton>
+                        {/* {Galery.filter((fil) => */}
+                        <ContainerModal>
+                            <ImageModal src={Farol} />
+                            <Info>
+                                <Locale>Arraiá do cabo</Locale>
+                                <SubLocale>Cabo</SubLocale>
+                                <Details>Cidade da ora de se ficar, sempre topada de cultura e escrito</Details>
+                                <Data>21/09/2021</Data>
 
+                                <MediaLink>
+                                    <SocialMedia />
+                                </MediaLink>
+                            </Info>
+                        </ContainerModal>
+                        {/* )} */}
+                    </ContentModal>
+                </>
+            }
         </Page >
 
     )
