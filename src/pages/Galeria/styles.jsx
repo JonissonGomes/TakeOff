@@ -188,19 +188,17 @@ export const Modal = styled.div`
     opacity: 0.8;
 `;
 export const ContainerModal = styled.div`
-    background-color: blue;
     display: flex;
 `;
 
 export const ContentModal = styled.div`
     background-color: white;
-    width: 1448px;
+    width: 1348px;
     height: 860px;
     margin-left: 14%;
     margin-top: -36%;
     margin-bottom: 0;
     border-radius: 4px;
-    border: 1px solid black;
     position: absolute;
 `;
 
@@ -212,47 +210,99 @@ export const ImageModal = styled.img`
 `;
 
 export const Info = styled.div`
-    background-color: blue;
+    background-color: none;
 `;
 
 export const Locale = styled.h1`
- font-family: lato, sans-serif;
-    letter-spacing: 0;
-    color: white;
-    margin-top: 10%;
+    font-family: lato, sans-serif;
+    letter-spacing: 0.5px;
+    color: #64747A;
+    margin-top: 16%;
     margin-bottom: 0;
     margin-left: 2%;
     font-weight: 900;
-    font-size: 22pt;
+    font-size: 24pt;
+    text-align: center;
 `;
 
 export const SubLocale = styled.h3`
  font-family: lato, sans-serif;
-    letter-spacing: 0;
-    color: white;
-    margin-top: 10%;
+    letter-spacing: 1px;
+    color: red;
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: 2%;
-    font-weight: 900;
-    font-size: 22pt;
+    font-weight: 300;
+    font-size: 18pt;
+    text-align: center;
 `;
 
 export const Details = styled.p`
- font-family: lato, sans-serif;
+    font-family: lato, sans-serif;
     letter-spacing: 0;
-    color: white;
-    margin-top: 10%;
+    color: black;
+    margin-top: 8%;
     margin-bottom: 0;
-    margin-left: 2%;
-    font-weight: 900;
-    font-size: 22pt;
+    margin-left: 12%;
+    font-weight: 300;
+    font-size: 14pt;
+    border: 1px solid #64747A;
+    border-radius: 6px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    padding-right: 20px;
+    width: 70%;
 `;
 
 export const Data = styled.p`
-    font-weight: 900;
-    font-size: 22pt;
+    font-weight: 300;
+    font-family: lato, sans-serif;
+    margin-left: 76%;
+    margin-top: 6px;
+    font-size: 12pt;
+    color: red;
+`;
+
+export const Aviso = styled.p`
+    font-size: 14pt;
+    font-family: lato, sans-serif;
+    color: #6D747A;
+    margin-top: 10%;
+    margin-left: 8%;
+    text-align: center;
+    margin-bottom: 0;
 `;
 
 export const MediaLink = styled.div`
-    background-color: blue;
+    width: 60%;
+    height: 4%;
+    margin-top: 0;
+    margin-left: 46%;
+    align-items: center;
+    text-align: center;
+`;
+
+export const CloseButton = styled.div`
+    background-color: none;
+    border: 1px solid #64747A;
+    border-radius: 4px;
+    margin-top: 6%;
+    margin-left: 4px;
+    margin-left: 90%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    color: #6A747A;
+    transition: 200ms;
+    &:hover{
+        transition: 200ms;
+        color: white;
+        background-color: #64747A;
+        border: 1px solid #64747A;
+    }
 `;

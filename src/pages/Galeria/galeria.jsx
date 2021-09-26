@@ -7,15 +7,15 @@ import {
     Page, ContainerTitle, Title, Description, ContainerFilter, FilterLabel,
     ContainerSelect, Button, Clear, ContainerImages, Content, Image, Cidade,
     Estado, More, Redes, ContainerInfo, Modal, ContentModal, SectionButton,
-    ContainerModal, Info, Locale, SubLocale, Details, Data, MediaLink, ImageModal
+    ContainerModal, Info, Locale, SubLocale, Details, Data, MediaLink, ImageModal,
+    Aviso, CloseButton
 } from './styles.jsx';
 
 
 import Header from '../../components/Header/header';
-import Footer from '../../components/Footer/footer';
+import SocialMedia from '../../components/SocialMedia/social'
 
 import Farol from '../../Assets/farol.png';
-import { SocialMedia } from '../../components/SocialMedia/styles.jsx';
 
 export default function Galeria() {
 
@@ -180,15 +180,20 @@ export default function Galeria() {
                             <Info>
                                 <Locale>Arraiá do cabo</Locale>
                                 <SubLocale>Cabo</SubLocale>
-                                <Details>Cidade da ora de se ficar, sempre topada de cultura e escrito</Details>
+                                <Details>Altas paisagens, um mar completamente claro,
+                                    com águas bem quentes onde você pode admirar a natureza.</Details>
                                 <Data>21/09/2021</Data>
 
+                                <Aviso>Visite as nossas redes sociais</Aviso>
                                 <MediaLink>
                                     <SocialMedia />
                                 </MediaLink>
+
                             </Info>
                         </ContainerModal>
-                        {/* )} */}
+
+                        <CloseButton onClick={closeModal}>X Fechar</CloseButton>
+
                     </ContentModal>
                 </>
             }
