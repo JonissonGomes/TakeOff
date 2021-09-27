@@ -11,7 +11,6 @@ export const ContainerTitle = styled.div`
 `;
 
 export const Title = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
     font-family: 'Montserrat', sans;
     letter-spacing: -0.5px;
     color: #000000;
@@ -21,7 +20,6 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
     font-family: lato, sans-serif;
     width: 68%;
     margin-left: 15%;
@@ -32,11 +30,13 @@ export const Description = styled.h1`
 `;
 
 export const ContainerTumb = styled.div`
-    width: 84vw;
+    width: 80vw;
     height: 60vh;
-    margin-top: 4%;
-    margin-left: 8%;
-    display: flex;
+    margin-top: 2%;
+    margin-left: 12%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 26px;
 `;
 
 export const Tumb = styled.div`
@@ -44,6 +44,9 @@ export const Tumb = styled.div`
     margin-right: 2.4%;
     width: 480px;
     height: 240px;
+    &:hover{
+
+    }
 `;
 
 export const ContainerLocale = styled.div`
@@ -52,7 +55,6 @@ export const ContainerLocale = styled.div`
 `;
 
 export const City = styled.h2`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
     font-family: 'Montserrat', sans;
     color: white;
     font-weight: 900;
@@ -62,7 +64,6 @@ export const City = styled.h2`
 `;
 
 export const State = styled.p`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
     font-family: 'Montserrat', sans;
     color: white;
     font-weight: 400;
@@ -79,4 +80,19 @@ export const ContainerMedia = styled.div`
     width: 18%;
     margin-left: 40%;
     margin-right: 40%;
+`;
+
+export const Hover = styled.div`
+    background-color: black;
+    width: 480px;
+    height: 196px;
+    margin-top: -12.6%;
+    border-radius: 4px;
+    position: absolute;
+    opacity: 0;
+    transition: 300ms;
+    &:hover{
+        transition: 300ms;
+        opacity: 0.2;
+    }
 `;
